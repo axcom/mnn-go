@@ -24,6 +24,7 @@ cd mnn\win
 ```
 然后运行 build.bat 批处理程序(注意当前目录是在win目录下)。
 执行该批处理指令后，当前项目mnn目录内容变更为如下：
+```
 mnn
 ├── MNN_C.h                 # MNN_C 的 C API 头文件
 ├── MNN_Express.h      # MNN_Express 的 C API 头文件
@@ -38,6 +39,7 @@ mnn
 ├── libmnn.dll         # 编译生成的桥接dll文件
 ├── libmnn.a           # MinGW工具生成的供gcc链接的.a文件
 └── MNN.lib            # 从MNN的build目录复制过来的lib文件
+```
 
 ### 3. 修改项目的go.mod文件
 
@@ -52,7 +54,7 @@ replace github.com/axcom/mnn => ./mnn
 ### 4. 编译你的项目
 ```
 rem 回到你的项目目录
-cd ..\.. 
+cd ..
 
 rem 编译go代码并链接.a(#cgo LDFLAGS: libmnn.a -lstdc++)
 go build -ldflags="-s -w"
