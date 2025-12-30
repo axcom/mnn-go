@@ -1,7 +1,7 @@
 package mnn
 
 /*
-#include "matrix_c.h"
+#include "Matrix_c.h"
 #include <stdlib.h>
 */
 import "C"
